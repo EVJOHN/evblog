@@ -1,6 +1,6 @@
 <script lang="ts">
-import { i18n } from '@i18n/translation'
 import I18nKey from '@i18n/i18nKey'
+import { i18n } from '@i18n/translation'
 import { getDefaultHue, getHue, setHue } from '@utils/setting-utils'
 
 let hue = getHue()
@@ -46,46 +46,46 @@ $: if (hue || hue === 0) {
 <style lang="stylus">
   #display-setting
     input[type="range"]
-      -webkit-appearance: none;
-      height: 1.5rem;
-      background-image: var(--color-selection-bar)
-      transition: background-image 0.15s ease-in-out
+      -webkit-appearance none
+      height 1.5rem
+      background-image var(--color-selection-bar)
+      transition background-image 0.15s ease-in-out
 
-    /* Input Thumb */
-    ::-webkit-slider-thumb
-      -webkit-appearance: none;
-      height: 1rem;
-      width: 0.5rem;
-      border-radius: 0.125rem;
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: none;
+    // Input Thumb
+    input[type="range"]::-webkit-slider-thumb
+      -webkit-appearance none
+      height 1rem
+      width 0.5rem
+      border-radius 0.125rem
+      background rgba(255, 255, 255, 0.7)
+      box-shadow none
       &:hover
-        background: rgba(255, 255, 255, 0.8);
+        background rgba(255, 255, 255, 0.8)
       &:active
-        background: rgba(255, 255, 255, 0.6);
+        background rgba(255, 255, 255, 0.6)
 
-    ::-moz-range-thumb
-      -webkit-appearance: none;
-      height: 1rem;
-      width: 0.5rem;
-      border-radius: 0.125rem;
-      border-width: 0
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: none;
+    input[type="range"]::-moz-range-thumb
+      -webkit-appearance none
+      height 1rem
+      width 0.5rem
+      border-radius 0.125rem
+      border-width 0
+      background rgba(255, 255, 255, 0.7)
+      box-shadow none
       &:hover
-        background: rgba(255, 255, 255, 0.8);
+        background rgba(255, 255, 255, 0.8)
       &:active
-        background: rgba(255, 255, 255, 0.6);
+        background rgba(255, 255, 255, 0.6)
 
-    &::-ms-thumb
-      -webkit-appearance: none;
-      height: 1rem;
-      width: 0.5rem;
-      border-radius: 0.125rem;
-      background: rgba(255, 255, 255, 0.7);
-      box-shadow: none;
+    input[type="range"]::-ms-thumb
+      -webkit-appearance none
+      height 1rem
+      width 0.5rem
+      border-radius 0.125rem
+      background rgba(255, 255, 255, 0.7)
+      box-shadow none
       &:hover
-        background: rgba(255, 255, 255, 0.8);
+        background rgba(255, 255, 255, 0.8)
       &:active
-        background: rgba(255, 255, 255, 0.6);
+        background rgba(255, 255, 255, 0.6)
 </style>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  type: 'xiaohongshu' | 'dianping'
+  url: string
+}
+
+const { type, url } = Astro.props
+
+const styles = {
+  base: 'inline-flex items-center px-2 py-1 rounded text-sm font-medium no-underline mr-2',
+  xiaohongshu: 'bg-[#ff2442] text-white hover:bg-[#ff3d57]',
+  dianping: 'bg-[#ffd700] text-[#37352f] hover:bg-[#ffde33]',
+}
+
+const icons = {
+  xiaohongshu: '📖',
+  dianping: '🍳',
+}
+
+const labels = {
+  xiaohongshu: '小红书',
+  dianping: '大众点评',
+}
+---
+
+<a href={url} 
+   class:list={[styles.base, styles[type]]} 
+   target="_blank" 
+   rel="noopener noreferrer">
+  {icons[type]} {labels[type]}
+</a> 
